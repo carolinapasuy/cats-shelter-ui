@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "test:component:open": "cypress open",
-    "test:contract": "mocha test/contract/**/*.test.js -r dotenv/config"
+    "test:contract": "mocha test/contract/**/*.test.js -r dotenv/config",
+    "publish:contract": "node ./test/contract/config/publish.js"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
