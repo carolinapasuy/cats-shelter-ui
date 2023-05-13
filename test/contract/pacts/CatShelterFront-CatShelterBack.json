@@ -4,6 +4,48 @@
   },
   "interactions": [
     {
+      "description": "a request to update a cat",
+      "providerState": "has animal to update",
+      "request": {
+        "matchingRules": {
+          "$.path": {
+            "match": "type"
+          }
+        },
+        "method": "PUT",
+        "path": "/animals/{name}"
+      },
+      "response": {
+        "body": {
+          "breed": "Shitzu",
+          "gender": "Male",
+          "name": "Sanchito",
+          "vaccinated": true
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          },
+          "$.body.breed": {
+            "match": "type"
+          },
+          "$.body.gender": {
+            "match": "type"
+          },
+          "$.body.name": {
+            "match": "type"
+          },
+          "$.body.vaccinated": {
+            "match": "type"
+          }
+        },
+        "status": 200
+      }
+    },
+    {
       "description": "a request to list all animals",
       "providerState": "has animals",
       "request": {

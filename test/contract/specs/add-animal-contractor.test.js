@@ -47,6 +47,8 @@ describe('Animal Service', () => {
 
             // Verifying response is an array with one element
             expect(responseBody).to.not.be.undefined;
+            expect(response.status).to.be.eql(201);
+
 
             // Verifyin data within response array
             expect(responseBody).to.have.property('name');
