@@ -29,10 +29,11 @@ export const AnimalController = {
             url: `animals/${name}`,
         });
     },
-    updateAnimal(name) {
+    updateAnimal(name, animal) {
         return axiosInstance.request({
             method: 'PUT',
             url: `animals/${name}`,
+            data: animal
         });
     }
 }
